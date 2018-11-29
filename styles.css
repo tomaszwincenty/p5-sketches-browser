@@ -1,3 +1,87 @@
-iframe {
+body {
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #444444;
+  font-size: 9pt;
+  background-color: #fafafa;
+}
+
+.wrapper {
+  margin-right: auto;
+  margin-left:  auto;
+  max-width: 960px;
+  padding-right: 40px;
+  padding-left:  40px;
+}
+
+.iframe-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.sketch-iframe {
+  margin: auto;
+  margin-top: 40px;
   border: none;
+}
+
+.tiles-wrapper {
+  display: inline-flex;
+  flex-flow: row wrap;
+}
+
+.gallery-title {
+  padding-top: 30px;
+}
+
+.gallery-tile {
+  width: 210px;
+  height: 300px;
+}
+
+.sketch-title {
+  font-weight: bolder;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.sketch-img-wrapper {
+  margin: auto;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #bbb;
+  overflow: hidden;
+}
+
+.sketch-img-wrapper img {
+  height: 100%;
+}
+
+.sketch-img-wrapper:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.select-sketch-button, .switch-views-button {
+  margin: auto;
+  margin-top: 1em;
+  width: 190px;
+  text-align: center;
+  padding: 5px;
+  border: 2px solid red;
+}
+
+.select-sketch-button:hover, .switch-views-button:hover {
+  cursor: pointer;
+  background-color: #eee;
+  border: 2px solid rgb(150, 0, 0);
+}
+
+.switch-views-button {
+  margin-top: 30px;
+  border: 2px solid #777;
+}
+
+.switch-views-button:hover {
+  border: 2px solid #333;
 }

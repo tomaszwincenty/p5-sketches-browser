@@ -2,16 +2,69 @@
   <head>
     <meta charset="UTF-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
-    <script src="sketches.js"></script>
+    <!-- <script src="sketches.js"></script> -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <button id="switchViewsButton" onclick="showGallery()">
-      Go to gallery
-    </button>
-    <div id="sketchContainer"></div>
-    <div id="gallery" hidden>Gallery</div>
+    <div class="wrapper">
+      <div id="sketch-container">
+        <div class="switch-views-button" onclick="onShowGallery()">
+          Go to gallery
+        </div>
+        <div class="iframe-wrapper">
+          <iframe
+            id="sketch-iframe"
+            class="sketch-iframe"
+            src="./sketches/sketch1.html"
+            width="600px"
+            height="400px"
+          ></iframe>
+        </div>
+      </div>
+      <div id="gallery" hidden>
+        <h2 class="gallery-title">Gallery</h2>
+        <div class="tiles-wrapper">
+          <div class="gallery-tile">
+            <div class="sketch-title"><span>SKETCH 1 🙃</span></div>
+            <div class="sketch-img-wrapper" onclick="onSelectSketch('sketch1')">
+              <img src="./assets/img1.jpg" />
+            </div>
+            <div
+              class="select-sketch-button"
+              onclick="onSelectSketch('sketch1')"
+            >
+              Show this sketch
+            </div>
+          </div>
 
+          <div class="gallery-tile">
+            <div class="sketch-title"><span>SKETCH 2 😒</span></div>
+            <div class="sketch-img-wrapper" onclick="onSelectSketch('sketch2')">
+              <img src="./assets/img2.webp" />
+            </div>
+            <div
+              class="select-sketch-button"
+              onclick="onSelectSketch('sketch2')"
+            >
+              Show this sketch
+            </div>
+          </div>
+
+          <div class="gallery-tile">
+            <div class="sketch-title"><span>SKETCH 3 🤩</span></div>
+            <div class="sketch-img-wrapper" onclick="onSelectSketch('sketch3')">
+              <img src="./assets/img3.jpg" />
+            </div>
+            <div
+              class="select-sketch-button"
+              onclick="onSelectSketch('sketch3')"
+            >
+              Show this sketch
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
   <script src="app.js"></script>
 </html>
